@@ -4,6 +4,7 @@ function Movie(props) {
   return (
     <div>
       <h1> {movieTitle} </h1>
+      <img src={props.posterPath} alt="movie poster" />
      </div>
   );
 }

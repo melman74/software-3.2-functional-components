@@ -1,20 +1,18 @@
-// import Movie from "./Movie.jsx";
+import Movie from "./Movie.jsx";
+
 
 function Genre(props) {
   const { genre, movie1, movie2 } = props;
 
- let localGenre = genre;
-
-
-
+console.log(props);
 
   return (
  <div className="genre">  
-    <h1> Genre: {localGenre.genreName} </h1>   
-    {/* <h1> Genre: {genreName} </h1>
-    <p> {genreDescription} </p> 
-    <Movie title = {movieTitle1} year = {movieYear1} />
-    <Movie title = {movieTitle2} year = {movieYear2} />     */}
+    <h1> Genre: {genre.genreName} </h1> 
+    <p> {genre.genreDescription}</p>
+    <img src={genre.genreIconPath} alt="genre icon" />
+    <Movie title = {movie1.movieTitle} year = {movie1.movieYear} posterPath = {movie1.moviePosterPath}/>
+    <Movie title = {movie2.movieTitle} year = {movie2.movieYear} posterPath = {movie2.moviePosterPath}/> 
 </div>
 );
 }
